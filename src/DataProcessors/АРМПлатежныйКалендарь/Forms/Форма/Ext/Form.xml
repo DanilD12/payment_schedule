@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="Группа1" id="1">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ПлатежныйКалендарь" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платежный календарь</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платежный календарь</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПлатежныйКалендарьРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Button name="СформироватьКалендарь" id="13">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.СформироватьКалендарь</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сформировать</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СформироватьКалендарьРасширеннаяПодсказка" id="14"/>
+						</Button>
+						<InputField name="Период" id="15">
+							<DataPath>Период</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПериодКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="17"/>
+						</InputField>
+						<SpreadSheetDocumentField name="ТабДокПлатежныйКалендарь" id="10">
+							<DataPath>ПлатежныйКалендарь</DataPath>
+							<ContextMenu name="ТабДокПлатежныйКалендарьКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ТабДокПлатежныйКалендарьРасширеннаяПодсказка" id="12"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="СогласованиеПлатежей" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Согласование платежей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Согласование платежей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СогласованиеПлатежейРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Button name="СформироватьБП" id="18">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СформироватьБП</CommandName>
+							<ExtendedTooltip name="СформироватьБПРасширеннаяПодсказка" id="19"/>
+						</Button>
+						<Table name="СписокЗадач" id="20">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокЗадач</DataPath>
+							<RowPictureDataPath>СписокЗадач.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокЗадачКонтекстноеМеню" id="21"/>
+							<AutoCommandBar name="СписокЗадачКоманднаяПанель" id="22"/>
+							<ExtendedTooltip name="СписокЗадачРасширеннаяПодсказка" id="23"/>
+							<SearchStringAddition name="СписокЗадачСтрокаПоиска" id="24">
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачСтрокаПоискаКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="СписокЗадачСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокЗадачСостояниеПросмотра" id="27">
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачСостояниеПросмотраКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="СписокЗадачСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокЗадачУправлениеПоиском" id="30">
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачУправлениеПоискомКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="СписокЗадачУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокЗадачБизнесПроцесс" id="33">
+									<DataPath>СписокЗадач.БизнесПроцесс</DataPath>
+									<ContextMenu name="СписокЗадачБизнесПроцессКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="СписокЗадачБизнесПроцессРасширеннаяПодсказка" id="35"/>
+								</LabelField>
+								<LabelField name="СписокЗадачДокумент" id="36">
+									<DataPath>СписокЗадач.Документ</DataPath>
+									<ContextMenu name="СписокЗадачДокументКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="СписокЗадачДокументРасширеннаяПодсказка" id="38"/>
+								</LabelField>
+								<LabelField name="СписокЗадачПользователь" id="39">
+									<DataPath>~СписокЗадач.Пользователь</DataPath>
+									<ContextMenu name="СписокЗадачПользовательКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="СписокЗадачПользовательРасширеннаяПодсказка" id="41"/>
+								</LabelField>
+								<LabelField name="СписокЗадачТочкаМаршрута" id="42">
+									<DataPath>СписокЗадач.ТочкаМаршрута</DataPath>
+									<ContextMenu name="СписокЗадачТочкаМаршрутаКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="СписокЗадачТочкаМаршрутаРасширеннаяПодсказка" id="44"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.АРМПлатежныйКалендарь</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПлатежныйКалендарь" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежный календарь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокЗадач" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СогласоватьПлатежЗадачиПоИсполнителю.Документ КАК Документ,
+	СогласоватьПлатежЗадачиПоИсполнителю.Подразделение КАК Подразделение,
+	СогласоватьПлатежЗадачиПоИсполнителю.БизнесПроцесс КАК БизнесПроцесс,
+	СогласоватьПлатежЗадачиПоИсполнителю.ТочкаМаршрута КАК ТочкаМаршрута
+ИЗ
+	Задача.СогласоватьПлатеж.ЗадачиПоИсполнителю КАК СогласоватьПлатежЗадачиПоИсполнителю
+ГДЕ
+	СогласоватьПлатежЗадачиПоИсполнителю.Выполнена = ЛОЖЬ</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТочкаМаршрута</dcssch:dataPath>
+					<dcssch:field>ТочкаМаршрута</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>БизнесПроцесс</dcssch:dataPath>
+					<dcssch:field>БизнесПроцесс</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Пользователь</dcssch:dataPath>
+					<dcssch:field>Пользователь</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Документ</dcssch:dataPath>
+					<dcssch:field>Документ</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Выполнена</dcssch:dataPath>
+					<dcssch:field>Выполнена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВерсияДанных</dcssch:dataPath>
+					<dcssch:field>ВерсияДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Подразделение</dcssch:dataPath>
+					<dcssch:field>Подразделение</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>Исполнитель</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнитель</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+				</Parameter>
+				<MainTable>Task.СогласоватьПлатеж.TasksByExecutive</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьКалендарь" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать календарь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать календарь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьКалендарь</Action>
+		</Command>
+		<Command name="СформироватьБП" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать БП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать БП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьБП</Action>
+		</Command>
+	</Commands>
+</Form>
